@@ -20,6 +20,7 @@ Este es un proyecto el cual tiene el objetivo poder demostrar, y poner en practi
    ```
 3. Renombrar archivo `.env.template` por `.env`
 4. Configurar las variables de entorno:
+   - PORT
    - DB_PASSWORD
    - DB_USERNAME
    - DB_NAME
