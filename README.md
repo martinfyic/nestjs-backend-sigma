@@ -30,7 +30,9 @@ Este es un proyecto el cual tiene el objetivo poder demostrar, y poner en practi
    ```bash
    docker compose up -d
    ```
-6. Correr en modo desarrollo:
+6. Ejecutar SEED para llenar base de datos en desarrollo:
+   `GET: /api/seed`
+7. Correr en modo desarrollo:
    ```bash
    npm run start:dev
    ```
