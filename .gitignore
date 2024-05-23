@@ -3,6 +3,12 @@
 /node_modules
 /build
 
+/static/products/*.png
+/static/products/*.jpg
+
+/static/uploads/*.png
+/static/uploads/*.jpg
+
 # Logs
 logs
 *.log
