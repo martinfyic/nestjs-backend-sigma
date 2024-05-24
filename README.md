@@ -27,6 +27,9 @@ Este es un proyecto el cual tiene el objetivo poder demostrar, y poner en practi
    - DB_NAME
    - DB_HOST
    - DB_PORT
+   - CLOUDINARY_API_KEY
+   - CLOUDINARY_API_SECRET
+   - CLOUDINARY_CLOUD_NAME
 5. Levantar base de datos:
    ```bash
    docker compose up -d
