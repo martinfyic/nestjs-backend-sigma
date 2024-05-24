@@ -8,6 +8,12 @@
 
 Este es un proyecto el cual tiene el objetivo poder demostrar, y poner en practica los conocimientos adquiridos.
 
+## Requerimientos
+
+- [Node.js](https://nodejs.org/en)
+- [NestJS CLI](https://docs.nestjs.com/cli/overview)
+- [Docker](https://www.docker.com/)
+
 ## Puesta en marcha
 
 1. Clonar el repositorio
