@@ -57,5 +57,5 @@ Estos usuarios son generados en el seed para poder realizar las pruebas con dife
   - email: admin@google.com
   - password: 123Admin
 - Usuario rol `User`
-  - email: admin@google.com
+  - email: user@google.com
   - password: 123User
