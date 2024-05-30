@@ -26,23 +26,36 @@ Este es un proyecto el cual tiene el objetivo poder demostrar, y poner en practi
    ```
 3. Renombrar archivo `.env.template` por `.env`
 4. Configurar las variables de entorno:
-   - PORT
-   - HOST_API
-   - DB_PASSWORD
-   - DB_USERNAME
-   - DB_NAME
-   - DB_HOST
-   - DB_PORT
-   - CLOUDINARY_API_KEY
-   - CLOUDINARY_API_SECRET
-   - CLOUDINARY_CLOUD_NAME
+   - `PORT`
+   - `HOST_API`
+   - `DB_PASSWORD`
+   - `DB_USERNAME`
+   - `DB_NAME`
+   - `DB_HOST`
+   - `DB_PORT`
+   - `CLOUDINARY_API_KEY`
+   - `CLOUDINARY_API_SECRET`
+   - `CLOUDINARY_CLOUD_NAME`
+   - `JWT_SECRET`
 5. Levantar base de datos:
    ```bash
    docker compose up -d
    ```
-6. Ejecutar SEED para llenar base de datos en desarrollo:
+6. Poner en marcha el proyecto `npm run start:dev`
+7. Ejecutar SEED para llenar base de datos en desarrollo:
    `GET: /api/seed`
-7. Correr en modo desarrollo:
+8. Correr en modo desarrollo:
    ```bash
    npm run start:dev
    ```
+
+### Usuarios de desarrollo
+
+Estos usuarios son generados en el seed para poder realizar las pruebas con diferentes roles:
+
+- Usuario de rol `Admin`
+  - email: admin@google.com
+  - password: 123Admin
+- Usuario rol `User`
+  - email: admin@google.com
+  - password: 123User
