@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "09959f8a-84e7-4578-954c-d6bf310a903b",
+		"name": "Nest-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22676653"
+	},
+	"item": [
+		{
+			"name": "Seed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/seed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhNzI3ZTg3LTMzYTMtNDEwNS05OGQ4LTNhZGY5OGM5YjU5OSIsImlhdCI6MTcxNzAyMjU0OCwiZXhwIjoxNzE3MDI5NzQ4fQ.3TQ2s7lMA8-c5rzz8bxX-fJRYqjmS8oH0Z4PSMeN42k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"{{$randomProductName}}\",\n    \"price\": {{$randomPrice}},\n    \"description\": \"{{$randomProductAdjective}}\",\n    \"sizes\": [\"S\",\"M\"],\n    \"gender\": \"men\",\n    \"tags\": [\"fire\"],\n    \"images\": [\"{{$randomImageUrl}}\", \"{{$randomImageUrl}}\"],\n    \"stock\": {{$randomInt}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products?limit=10&offset=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Term",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/Gorgeous Concrete Chips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"Gorgeous Concrete Chips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/3722fd39-2897-4033-9bf0-5a1f484e81d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3722fd39-2897-4033-9bf0-5a1f484e81d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhNzI3ZTg3LTMzYTMtNDEwNS05OGQ4LTNhZGY5OGM5YjU5OSIsImlhdCI6MTcxNjczOTU0NCwiZXhwIjoxNzE2NzQ2NzQ0fQ.GUZNV11U_v_RnT8kpFA4ImVqyWIHs6lVVszlnJTQZRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"{{$randomProductAdjective}}\",\n    \"title\": \"{{$randomProductName}}\",\n    \"images\": [\n        \"{{$randomImageUrl}}\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/265a7a5e-5e75-46dd-ae0a-373412d6fb9c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"265a7a5e-5e75-46dd-ae0a-373412d6fb9c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/martin/Imágenes/Capturas de pantalla/Captura desde 2024-05-06 18-38-44.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/files/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"files",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/files/product/04d72f08-6fbf-4afa-b809-a49147a79a1d.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"files",
+						"product",
+						"04d72f08-6fbf-4afa-b809-a49147a79a1d.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image Cloudinary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/martin/Imágenes/Capturas de pantalla/Captura desde 2024-05-06 18-38-44.png"
+						},
+						{
+							"key": "image",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cloudinary/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cloudinary",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhNzI3ZTg3LTMzYTMtNDEwNS05OGQ4LTNhZGY5OGM5YjU5OSIsImlhdCI6MTcxNjczOTU0NCwiZXhwIjoxNzE2NzQ2NzQ0fQ.GUZNV11U_v_RnT8kpFA4ImVqyWIHs6lVVszlnJTQZRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@google.com\",\n    \"password\": \"123Admin\",\n    \"fullName\": \"AdminDevelop\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@google.com\",\n    \"password\": \"123Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Auth Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmMDEyOTJhLWNkYzMtNDkxOS04NzY0LTI5NzhlY2E2MWI1YiIsImlhdCI6MTcxNzAyODYyMCwiZXhwIjoxNzE3MDM1ODIwfQ.WEQjDJ9is3ynIChUu07N4NRM7avNREcYXC71QHdY9QA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/auth/check-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"check-status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
