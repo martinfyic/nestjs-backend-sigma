@@ -47,7 +47,6 @@ export class MessagesWsGateway
 
   @SubscribeMessage('message-from-client')
   handleMessageFromClient(client: Socket, payload: NewMessageDto) {
-    console.log(client);
     // Emite únicamente al cliente.
     // client.emit('message-from-server', {
     //   fullName: 'Tincho',
