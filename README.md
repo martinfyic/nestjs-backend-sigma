@@ -62,6 +62,6 @@ Estos usuarios son generados en el seed para poder realizar las pruebas con dife
 
 ## Endpoints:
 
-- [Postman](https://web.postman.co/documentation/22676653-09959f8a-84e7-4578-954c-d6bf310a903b/publish?workspaceId=839cc844-d521-4f50-889e-691ece4a73d5#styling)
+- [Postman](https://documenter.getpostman.com/view/22676653/2sA3QtfXVe)
 
 - [Swagger](http://localhost:3000/api/swagger)
